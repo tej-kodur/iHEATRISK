@@ -1,0 +1,177 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner Section */
+/* BANNER SECTION (Hero Style) */
+.banner-section {
+  /* Make it tall enough to look like a hero banner */
+  min-height: 70vh; 
+  
+  /* Use flex so text and image can sit side by side */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Subtle gradient background that goes from left (light gray) to right (white) */
+  background: linear-gradient(to right, #f8f8f8 30%, #ffffff 100%);
+
+  /* Add some padding around the content */
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* LEFT TEXT AREA */
+.banner-text {
+  flex: 0 0 40%;
+  max-width: 40%;
+  z-index: 1; /* So text stays on top if we add overlays */
+}
+
+.banner-text h1 {
+  font-size: 48px;  /* Larger headline */
+  margin-bottom: 20px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.banner-text button {
+  background: #007BFF;   /* Example brand color */
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE AREA */
+.banner-images {
+  flex: 0 0 60%;
+  position: relative;
+  height: 70vh;     /* Match the min-height of the section */
+  overflow: hidden; /* So the images don’t overflow the container */
+  border-radius: 8px; /* Slight rounding on corners if desired */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* IMAGES STYLING */
+.banner-images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures images fill container without distortion */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-images img.active {
+  opacity: 1;
+}
+/* How-to-Use Section */
+.features {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #f9f9f9; /* Subtle background for contrast */
+}
+
+.feature-box {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: calc(25% - 30px); /* Four in a row, with gap considered */
+  min-width: 220px;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-box h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.how-to-use {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.how-to-use h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.step {
+  width: 200px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.step img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.footer-brands {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.footer-brands img {
+  width: 100px;
+  height: auto;
+}
